@@ -1,0 +1,30 @@
+@use "../utils/mixin" as *;
+
+.header {
+padding-top: 16px;
+padding-bottom: 16px;
+}
+.header__container {
+    @include flex-position();
+}
+.header__title {
+}
+.header__nav {
+    
+}
+.header__list {
+ @include flex-position();
+}
+.header__item {
+}
+.header__text {
+}
+.user-menu__list {
+  @include flex-position();
+}
+.user-menu__item {
+}
+.user-menu__icon {
+}
+.user-menu__text {
+}
