@@ -1,0 +1,35 @@
+{
+  "name": "baking",
+  "version": "1.0.0",
+  "description": "https://www.figma.com/design/a0kYqZ9qw2gAj9L328HICg/TARLA?node-id=0-1&p=f",
+  "scripts": {
+    "dev-server": "npx parcel src/index.html",
+    "dev": "concurrently \"npm run sass-watch\" \"npm run dev-server\"",
+    "build": "parcel build src/index.html --public-url /baking/",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build",
+    "sass-compile": "sass src/sass/index.scss dist/css/style.css",
+    "sass-watch": "sass --watch src/sass/index.scss dist/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmsonixx/baking.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/mmsonixx/baking/issues"
+  },
+  "homepage": "https://github.com/mmsonixx/baking#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.16.4",
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "concurrently": "^10.0.5",
+    "gh-pages": "^6.3.0",
+    "sass": "^1.105.0"
+  }
+}
