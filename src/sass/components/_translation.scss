@@ -1,0 +1,92 @@
+.language-switcher {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  height: 42px;
+
+  padding: 4px;
+
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+
+  box-shadow: 0 4px 12px rgba(43, 37, 34, 0.08);
+
+  flex: 0 0 96px;
+  width: 96px;
+  overflow: hidden;
+  margin-right: 40px;
+}
+
+.language-glow {
+  position: absolute;
+
+  top: 4px;
+  left: 4px;
+
+  width: 42px;
+  height: 32px;
+
+  border-radius: 25px;
+
+  background: linear-gradient(
+    135deg,
+    var(--button-1),
+    var(--button-2),
+    var(--pink)
+  );
+
+  box-shadow: 0 3px 10px rgba(143, 117, 104, 0.25);
+
+  transition:
+    transform 0.45s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+    box-shadow 0.3s ease;
+}
+
+.language-switcher.en .language-glow {
+  transform: translateX(44px);
+}
+
+.language-btn {
+  position: relative;
+  z-index: 2;
+
+  width: 42px;
+  height: 32px;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  background: transparent;
+
+  color: var(--muted);
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.language-btn.active {
+  color: var(--text);
+  transform: scale(1.08);
+}
+
+.language-btn:not(.active):hover {
+  color: var(--text);
+  transform: scale(1.05);
+}
+
+.language-btn:active {
+  transform: scale(0.9);
+}

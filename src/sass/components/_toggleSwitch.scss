@@ -1,0 +1,82 @@
+.toggle {
+  --w: 56px;
+  --h: 30px;
+  width: var(--w);
+  height: var(--h);
+  position: relative;
+  border-radius: 999px;
+  background: #8F7568;
+  display: inline-block;
+  transition: background 0.25s;
+  cursor: pointer;
+}
+.toggle input {
+  display: none;
+}
+.toggle .knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: calc(var(--h) - 6px);
+  height: calc(var(--h) - 6px);
+  border-radius: 50%;
+  background: #F4EEE8;
+  transform: translateX(0);
+  transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.3, 1);
+   z-index: 2;
+}
+.toggle input:checked + .knob {
+  transform: translateX(calc(var(--w) - var(--h)));
+}
+.toggle input:checked ~ .bg {
+   background: #E7B9B0;
+}
+.toggle .bg {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  pointer-events: none;
+  transition: background 0.25s;
+}
+
+
+.toggle svg {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 2px;
+  left: 2px;
+
+  fill: none;
+  stroke: #8F7568;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  transition: 0.25s ease;
+}
+
+/* Солнце */
+.toggle__sun {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Луна */
+.toggle__moon {
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+/* Когда включена тёмная тема */
+.toggle  input:checked + .knob .toggle__sun {
+  opacity: 0;
+  transform: scale(0.6);
+  
+}
+
+.toggle input:checked + .knob .toggle__moon {
+  opacity: 1;
+  transform: scale(1);
+  stroke: #E7B9B0;
+}

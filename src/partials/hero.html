@@ -1,0 +1,42 @@
+<section class="hero" >
+  <img
+    src="../img/backgroundLight.png"
+    alt="Маникюр"
+    class="hero__background"
+  />
+
+  <div class="container hero__container">
+    <h1 class="hero__subtitle" data-i18n="heroSubtitle">МАСТЕР МАНИКЮРА</h1>
+    <h2 class="hero__logo">N<span>&</span>M</h2>
+    <p class="hero__info" data-i18n="heroInfo">
+      Здесь про красоту, заботу о себе и немного времени только для себя.
+      <span> ♡</span>
+    </p>
+
+    <p class="hero__about-me" data-i18n="heroAbout">
+      Я — Натали, мастер маникюра. Создаю аккуратный и эстетичный маникюр,
+      который подчёркивает вашу индивидуальность.
+    </p>
+
+    <svg width="0" height="0" style="position: absolute">
+      <filter id="goo" x="-50%" y="-50%" width="200%" height="200%">
+        <feComponentTransfer>
+          <feFuncA type="discrete" tableValues="0 1"></feFuncA>
+        </feComponentTransfer>
+
+        <feGaussianBlur stdDeviation="5"></feGaussianBlur>
+
+        <feComponentTransfer>
+          <feFuncA type="table" tableValues="-5 11"></feFuncA>
+        </feComponentTransfer>
+      </filter>
+    </svg>
+
+    <button class="hero__button" type="button"  >
+       <span data-i18n="booking">Записаться онлайн</span>
+      <svg class="hero__icon">
+        <use href="./img/icons/symbol-defs.svg#icon-calendar"></use>
+      </svg>
+    </button>
+  </div>
+</section>

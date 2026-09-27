@@ -1,0 +1,48 @@
+:root {
+--bg: #F5F0EA;
+  --text: #2B2522;
+  --bg-light: #FBF8F4;
+  --accent: #8F7568;
+  --pink: #e7b0c4;
+  --muted: #756B66;
+  --card: #EFE8E1;
+  --border: #D6CBC3;
+
+--button-glow-1: #8F7568;
+  --button-glow-2: #B89B91;
+  --button-glow-3: #e7b0c4;
+  --button-glow-4: #6F5C55;
+
+
+   --spring-easing: linear(
+    0, 0.002, 0.01 0.9%, 0.038 1.8%, 0.156,
+    0.312 5.8%, 0.789 11.1%, 1.015 14.2%,
+    1.096, 1.157, 1.199, 1.224 20.3%,
+    1.231, 1.231, 1.226, 1.214 24.6%,
+    1.176 26.9%, 1.057 32.6%, 1.007 35.5%,
+    0.984, 0.968, 0.956, 0.949 42%,
+    0.946 44.1%, 0.95 46.5%, 0.998 57.2%,
+    1.007, 1.011 63.3%, 1.012 68.3%,
+    0.998 84%, 1
+  );
+
+  --spring-duration: 1.66s;
+  
+}
+.dark-theme {
+   --bg: #0E0D0C;
+  --bg-light: #151311;
+  --text: #F4EEE8;
+  --accent: #151413;
+  --pink: #e7b0c4;
+  --muted: #B8ADA5;
+  --card: #1C1917;
+  --border: #131312;
+
+ --button-glow-1: #E7B0C4;
+  --button-glow-2: #D6B5AA;
+  --button-glow-3: #BFA69B;
+  --button-glow-4: #8F7568;
+
+  
+}

@@ -1,4 +1,8 @@
 @use "./base/reset";
 @use "./base/common";
 @use "./components/header";
+@use "./components/toggleSwitch";
+@use "./components/translation";
+@use './components/hero';
 @use "./utils/mixin";
+@use './utils/variebles';

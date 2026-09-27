@@ -1,0 +1,187 @@
+@use "../utils/mixin" as *;
+@use "../utils/variebles" as *;
+
+.hero {
+}
+.hero__background {
+  position: absolute;
+}
+
+.hero__container {
+  position: relative;
+  width: 600px;
+  top: 70px;
+  right: 300px;
+}
+.hero__subtitle {
+    font-family: "Open Sans";
+  color: var(--button-glow-1);
+     font-size: 25px;
+     font-weight: 500;
+     margin-bottom: 10px;
+     letter-spacing: 3px;
+}
+
+.hero__logo {
+  font-family: "Playpen Sans", cursive;
+  font-weight: 300;
+ color: var(--text);
+  font-size: 55px;
+  margin-left: 20px;
+}
+
+.hero__logo span {
+  color: mix(#fff, #e91e63, 85%);
+  font-size: 40px;
+  font-weight: 300;
+  text-shadow:
+    -0.0075em 0.0075em 0 mix(#fff, #e91e63, 94%),
+    0.005em 0.005em 0 mix(#fff, #e91e63, 60%),
+    0.01em 0.01em 0 mix(#fff, #e91e63, 62%),
+    0.015em 0.015em mix(#fff, #e91e63, 64%),
+    0.02em 0.02em 0 mix(#fff, #e91e63, 66%),
+    0.025em 0.025em 0 mix(#fff, #e91e63, 68%),
+    0.03em 0.03em 0 mix(#fff, #e91e63, 70%),
+    0.035em 0.035em 0 mix(#fff, #e91e63, 72%);
+}
+.hero__info {
+  color: var(--text);
+  font-family: "Playpen Sans", cursive;
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  span {
+    font-size: 30px;
+  }
+}
+
+.hero__about-me{
+ color: var(--text);
+   font-family: "Playpen Sans", cursive;
+  font-size: 20px;
+  font-weight: 200;
+  margin-bottom: 10px;
+}
+
+.hero__icon{
+    width: 20px;
+    height: 20px;
+   margin-left: 10px;
+   fill: #fff;
+  
+
+}
+
+@property --a {
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: true;
+}
+
+@property --hue {
+  syntax: "<angle>";
+  initial-value: 170deg;
+  inherits: false;
+}
+
+
+
+.hero__button {
+  --a: 0%;
+  --x: 50;
+  --y: 50;
+
+  --button: var(--button-glow-1);
+  --size: 40px;
+@include flex-position();
+  background: transparent;
+
+  color: #fff;
+
+  font-size: 20px;
+
+  position: relative;
+
+  padding: var(--size) calc(var(--size) * 1.5);
+
+  transition:
+    --a 0.5s ease-in-out,
+    scale var(--spring-duration) var(--spring-easing);
+
+  scale: 0.92;
+
+  isolation: isolate;
+
+ 
+   font-family: "Playpen Sans", cursive;
+}
+
+.hero__button:hover {
+  --a: 100%;
+
+  transition-duration: 0.5s, 1s;
+
+  box-shadow: none;
+  opacity: 1;
+
+  scale: 1;
+}
+
+.hero__button::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  filter:
+    blur(12px)
+    url(#goo);
+
+  background-image:
+    linear-gradient(
+      0deg,
+     var(--button-glow-1),
+      var(--button-glow-2)
+    ),
+
+    radial-gradient(
+      40% 70% at
+      calc(var(--x) * 1%)
+      calc(var(--y) * 1%),
+
+      rgba(231, 176, 196, var(--a)) 0%,
+      transparent 90%
+    );
+
+  background-clip:
+    content-box,
+    border-box;
+
+  padding: 24px;
+
+  z-index: -1;
+
+  border: inherit;
+}
+ 
+
+
+@keyframes color {
+  0% {
+    background-color: var(--button-glow-1);
+  }
+
+  33% {
+    background-color: var(--button-glow-2);
+  }
+
+  66% {
+    background-color: var(--button-glow-3);
+  }
+
+  100% {
+    background-color:var(--button-glow-4);
+  }
+}
