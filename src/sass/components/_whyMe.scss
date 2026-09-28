@@ -1,0 +1,45 @@
+@use "../utils/mixin" as *;
+@use "../utils/variebles" as *;
+
+.whyMe {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.whyMe__title {
+ @include title($color: var(--text), $font: "Playpen Sans", $size: 30px, $weight: 400);
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.whyMe__list {
+    @include flex-position($gap: 30px);
+      align-items: stretch;
+}
+.whyMe__item {
+  flex: 1;
+   @include flex-position($horizontally:none, $direction:column,$vertically:none);
+    border-right: 1px var(--border) solid;
+  padding: 10px 20px;
+    
+}
+
+.whyMe__item:last-child {
+  border-right: none;
+}
+
+.whyMe__icon {
+    fill: var(--button-glow-1);
+    width: 30px;
+    height: 30px;
+    margin-bottom: 15px;
+}
+.whyMe__subtitle {
+     @include title($color: var(--text), $font: "Open Sans", $size: 23px, $weight: 400,);
+       height: 50px;
+       margin-bottom: 25px;
+}
+.whyMe__text {
+      width: 100%;
+     
+     @include text($color: var(--text), $size: 18px, $weight: 200, $font: "Playpen Sans");
+}

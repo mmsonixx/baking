@@ -2,6 +2,7 @@
 @use "../utils/variebles" as *;
 
 .hero {
+  padding-bottom: 30px;
 }
 .hero__background {
   position: absolute;
@@ -14,19 +15,13 @@
   right: 300px;
 }
 .hero__subtitle {
-    font-family: "Open Sans";
-  color: var(--button-glow-1);
-     font-size: 25px;
-     font-weight: 500;
+  @include title($color: var(--button-glow-1), $font: "Open Sans", $size: 25px, $weight: 500, $spacing: 3px);
      margin-bottom: 10px;
-     letter-spacing: 3px;
+  
 }
 
 .hero__logo {
-  font-family: "Playpen Sans", cursive;
-  font-weight: 300;
- color: var(--text);
-  font-size: 55px;
+@include text($color: var(--text), $size: 55px, $weight: 300, $font: "Playpen Sans");
   margin-left: 20px;
 }
 
@@ -45,10 +40,7 @@
     0.035em 0.035em 0 mix(#fff, #e91e63, 72%);
 }
 .hero__info {
-  color: var(--text);
-  font-family: "Playpen Sans", cursive;
-  font-size: 25px;
-  font-weight: 400;
+  @include text($color: var(--text), $size: 25px, $weight: 400, $font: "Playpen Sans");
   margin-bottom: 20px;
   margin-top: 10px;
   span {
@@ -57,10 +49,7 @@
 }
 
 .hero__about-me{
- color: var(--text);
-   font-family: "Playpen Sans", cursive;
-  font-size: 20px;
-  font-weight: 200;
+  @include text($color: var(--text), $size: 20px, $weight: 200, $font: "Playpen Sans");
   margin-bottom: 10px;
 }
 

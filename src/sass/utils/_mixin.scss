@@ -5,3 +5,23 @@
         justify-content: $horizontally;
         flex-direction: $direction;
 }
+
+@mixin title($color: $title-color, $font: none, $size: 0, $height: normal, $spacing: 0, $weight: 0) {
+    color: $color;
+     font-style: normal;
+        font-family: $font;
+        font-size: $size;
+        line-height: $height;
+        letter-spacing: $spacing;
+        font-weight: $weight;
+}
+
+@mixin text($color: var(--text), $size: 0, $height: normal, $spacing: 0, $weight: 400,  $font: none) {
+    color: $color;
+     font-style: normal;
+        font-family: $font;
+        font-size: $size;
+        line-height: $height;
+        letter-spacing: $spacing;
+        font-weight: $weight;
+}
