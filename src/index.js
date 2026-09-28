@@ -10,11 +10,11 @@ const heroBackground = document.querySelector('.hero__background');
 
 if (styleMode === "dark") {
   enableDarkStyle();
-    heroBackground.src = "./img/backgroundDark.png";
+    heroBackground.src = "/img/backgroundDark.png";
   styleToggle.checked = true;
 } else {
   disableDarkStyle();
-  heroBackground.src = "./img/backgroundLight.png";
+  heroBackground.src = "/img/backgroundLight.png";
   styleToggle.checked = false;
 }
 
@@ -22,10 +22,10 @@ if (styleMode === "dark") {
 styleToggle.addEventListener("change", () => {
   if (styleToggle.checked) {
     enableDarkStyle();
-    heroBackground.src = "./img/backgroundDark.png"
+    heroBackground.src = "/img/backgroundDark.png"
   } else {
     disableDarkStyle();
-     heroBackground.src = "./img/backgroundLight.png";
+     heroBackground.src = "/img/backgroundLight.png";
   }
 });
 
